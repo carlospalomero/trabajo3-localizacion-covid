@@ -54,12 +54,9 @@ public class Coordenada {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
+
 		Coordenada other = (Coordenada) obj;
-		if (Float.floatToIntBits(latitud) != Float.floatToIntBits(other.latitud))
-			return false;
-		if (Float.floatToIntBits(longitud) != Float.floatToIntBits(other.longitud))
-			return false;
-		return true;
+		return latitud == other.latitud && longitud == other.longitud;
 	}
 	
 }
