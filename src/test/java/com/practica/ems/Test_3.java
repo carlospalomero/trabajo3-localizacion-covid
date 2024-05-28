@@ -16,11 +16,13 @@ import com.practica.excecption.EmsLocalizationNotFoundException;
 import com.practica.excecption.EmsPersonNotFoundException;
 import com.practica.genericas.FechaHora;
 
+import java.io.IOException;
+
 public class Test_3 {
 	private static ContactosCovid contactosCovid;
 
 	@BeforeEach
-	void setUp() {		
+	void setUp() throws EmsInvalidTypeException, EmsInvalidNumberOfDataException, EmsDuplicatePersonException, EmsDuplicateLocationException, IOException {
 		contactosCovid = new ContactosCovid();
 		contactosCovid.loadDataFile("datos2.txt", false);
 	}
