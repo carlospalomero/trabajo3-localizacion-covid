@@ -10,6 +10,11 @@ public class Coordenada {
 		// TODO Auto-generated constructor stub
 	}
 
+	public Coordenada(Coordenada co) {
+		this.latitud = co.latitud;
+		this.longitud = co.longitud;
+	}
+
 	public Coordenada(float latitud, float longitud) {
 		super();
 		this.latitud = latitud;
